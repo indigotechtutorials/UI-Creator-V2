@@ -1,0 +1,15 @@
+:root {
+  --button-padding: 8px 12px 8px 12px;
+  --button-border-radius: 8px;
+}
+
+/* Organization of UI library styling */
+
+.primary-button {
+  text-decoration: none;
+  background-color: var(--primary);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  color: hsl(from var(--primary) h s calc(l + 40));
+  font-size: 20px;
+}

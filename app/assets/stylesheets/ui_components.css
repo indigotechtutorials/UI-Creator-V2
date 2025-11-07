@@ -1,0 +1,61 @@
+.component-section {
+  margin-top: 32px;
+  
+  h4 {
+    font-size: 32px;
+  }
+
+  .preview {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.component-settings {
+  display: none;
+  margin: 32px 0px 32px 0px;
+  label {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.color-scheme-container {
+  margin-top: 32px;
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+  
+  .color-scheme-grid {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    .color-scheme-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      
+      span {
+        font-size: 16px;
+      }
+
+      .color-preview {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
