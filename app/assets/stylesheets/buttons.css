@@ -1,6 +1,9 @@
 :root {
   --button-padding: 8px 12px 8px 12px;
   --button-border-radius: 8px;
+  --box-shadow-h-offset: 5px;
+  --box-shadow-v-offset: 5px;
+  --box-shadow-blur: 10px;
 }
 
 /* Organization of UI library styling */
@@ -12,4 +15,10 @@
   border-radius: var(--button-border-radius);
   color: hsl(from var(--primary) h s calc(l + 40));
   font-size: 20px;
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
+  transition: transform 250ms ease-in;
+}
+
+.primary-button:hover {
+  transform: scale(1.05);
 }
