@@ -15,6 +15,4 @@ v2 because I first started creating this same app but using TailwindCSS and deci
 
 This is definitely still a work in progress but I can't wait to share this app off once its ready!
 
-Here is current progress. We have one button built! Messing around with HSL colors which is new for adjusting hues and such based off variable of CSS. Meaning instead palletes for any color. Interesting
-
-<img width="1710" height="978" alt="Screenshot 2025-11-07 at 2 01 30 PM" src="https://github.com/user-attachments/assets/ac1dbb5f-ce0a-4261-af3e-073a8f42566b" />
+<img width="1710" height="982" alt="Screenshot 2025-11-08 at 2 18 11 PM" src="https://github.com/user-attachments/assets/07355fdf-c990-495a-83ba-f1afe06f52e3" />
