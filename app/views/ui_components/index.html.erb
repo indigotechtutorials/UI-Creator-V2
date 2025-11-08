@@ -69,10 +69,14 @@
     <div class="preview">
       <%= render "ui_components/buttons/preview" %>
     </div>
-    <div class="code">
-      <pre><code class="language-html">
-<%= File.read("app/views/ui_components/buttons/_preview.html.erb") %>
-      </code></pre>
+    <div class="code" data-controller="clipboard" data-clipboard-text-value="<%= File.read("app/views/ui_components/buttons/preview.html") %>">
+      <%= link_to "#", data: { action: "clipboard#copy" }, class: "copy-code" do %>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" data-clipboard-target="success">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </svg>
+        <span> Copy Code </span>
+      <% end %>
+      <%= render "ui_components/buttons/code" %>
     </div>
   </div>
 </div>

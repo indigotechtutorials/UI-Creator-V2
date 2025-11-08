@@ -15,6 +15,33 @@
 
   .code {
     margin-top: 16px;
+    position: relative;
+
+    .copy-code {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      text-decoration: none;
+      color: rgb(57, 57, 57);
+      background-color: rgb(154, 154, 154);
+      padding: 6px 10px 6px 10px;
+      border-radius: 6px;
+      transition: background-color 250ms ease-in;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .icon {
+        color: rgb(45, 178, 45);
+        width: 16px;
+        display: none;
+      } 
+    }
+
+    .copy-code:hover {
+      color: rgb(148, 148, 148);
+      background-color: rgb(49, 49, 49);
+    }
   }
 }
 
