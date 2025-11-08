@@ -1,9 +1,11 @@
 :root {
-  --button-padding: 8px 12px 8px 12px;
+  --button-padding: 6px 10px 6px 10px;
   --button-border-radius: 8px;
+  --button-font-size: 18px;
   --box-shadow-h-offset: 5px;
   --box-shadow-v-offset: 5px;
   --box-shadow-blur: 10px;
+  --border-size: 4px;
 }
 
 /* Organization of UI library styling */
@@ -12,9 +14,10 @@
   text-decoration: none;
   background-color: var(--primary);
   padding: var(--button-padding);
+  border: var(--border-size) solid var(--primary);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--primary) h s calc(l + 40));
-  font-size: 20px;
+  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
   transition: transform 250ms ease-in;
 }
@@ -26,14 +29,31 @@
 .secondary-button {
   text-decoration: none;
   background-color: var(--secondary);
+  border: var(--border-size) solid var(--secondary);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--secondary) h s calc(l + 40));
-  font-size: 20px;
+  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--secondary) h s calc(l - 40) / 0.5);
   transition: transform 250ms ease-in;
 }
 
 .secondary-button:hover {
   transform: scale(1.05);
+}
+
+.outline-button {
+  text-decoration: none;
+  border: var(--border-size) solid var(--primary);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  color: hsl(from var(--primary) h s l);
+  font-size: var(--button-font-size);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
+  transition: background-color 250ms ease-in;
+}
+
+.outline-button:hover {
+  background-color: var(--primary);
+  color: hsl(from var(--primary) h s calc(l + 40));
 }
