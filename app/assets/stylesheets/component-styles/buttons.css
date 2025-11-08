@@ -57,3 +57,48 @@
   background-color: var(--primary);
   color: hsl(from var(--primary) h s calc(l + 40));
 }
+
+.delete-button {
+  text-decoration: none;
+  background-color: var(--red);
+  padding: var(--button-padding);
+  border: var(--border-size) solid var(--red);
+  border-radius: var(--button-border-radius);
+  color: hsl(from var(--red) h s calc(l + 40));
+  font-size: var(--button-font-size);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
+  transition: background-color 250ms ease-in;
+}
+
+.delete-button:hover {
+  background-color: hsl(from var(--red) h s calc(l + 10));
+  border-color: hsl(from var(--red) h s calc(l + 10));
+}
+
+.round-button {
+  text-decoration: none;
+  background-color: var(--primary);
+  padding: var(--button-padding);
+  border: var(--border-size) solid var(--primary);
+  border-radius: 100px;
+  color: hsl(from var(--primary) h s calc(l + 40));
+  font-size: var(--button-font-size);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
+  transition: transform 250ms ease-in;
+}
+
+.round-button:hover {
+  transform: scale(1.05);
+}
+
+.dark-button {
+  text-decoration: none;
+  background-color: hsl(from var(--black) h s calc(l - 10));
+  padding: var(--button-padding);
+  border: var(--border-size) solid hsl(from var(--black) h s calc(l - 10));
+  border-radius: var(--button-border-radius);
+  color: hsl(from var(--black) h s calc(l + 80));
+  font-size: var(--button-font-size);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
+  transition: transform 250ms ease-in;
+}

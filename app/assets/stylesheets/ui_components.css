@@ -10,6 +10,11 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .code {
+    margin-top: 16px;
   }
 }
 
@@ -56,10 +61,6 @@
       .color-preview {
         width: 80px;
         height: 80px;
-      }
-
-      .input-container {
-        display: none;
       }
     }
   }
