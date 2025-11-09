@@ -62,6 +62,11 @@
 .color-scheme-container {
   margin-top: 32px;
 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 16px;
+
   h3 {
     font-size: 28px;
   }
@@ -88,6 +93,10 @@
       .color-preview {
         width: 80px;
         height: 80px;
+      }
+
+      [data-coloris] {
+        width: 70px;  
       }
     }
   }

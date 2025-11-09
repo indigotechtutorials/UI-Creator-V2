@@ -22,9 +22,13 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "coloris", "data-turbo-track": "reload", "defer": "true" %>
   </head>
 
   <body data-controller="dark-mode-toggle">
     <%= yield %>
+    <div id="dynamic-css">
+      <%= render "layouts/color_scheme_css" %>
+    </div>
   </body>
 </html>
