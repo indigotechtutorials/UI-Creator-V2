@@ -15,9 +15,4 @@ v2 because I first started creating this same app but using TailwindCSS and deci
 
 This is definitely still a work in progress but I can't wait to share this app off once its ready!
 
-<img width="1710" height="982" alt="Screenshot 2025-11-08 at 2 18 11 PM" src="https://github.com/user-attachments/assets/07355fdf-c990-495a-83ba-f1afe06f52e3" />
-
-
-#### Realtime updates of UI when changing colors and other properties.
-
 ![2025-11-11 13 22 52](https://github.com/user-attachments/assets/89904366-d933-4701-bd98-f90ba822984a)
