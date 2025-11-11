@@ -3,9 +3,8 @@ import { post } from "@rails/request.js"
 
 // Connects to data-controller="color-picker"
 export default class extends ApplicationController {
-  static targets = ["preview"]
   static values = { callbackUrl: String }
-  static debounces = ["change"]
+  static debounces = ["sendCallbackMessage"]
 
   initialize() {
     useDebounce(this, { wait: 200 })
@@ -13,8 +12,13 @@ export default class extends ApplicationController {
 
   async change(e) {
     let input = e.target
-    this.previewTarget.style.backgroundColor = input.value
-    await post(this.callbackUrlValue, { 
+    let colorChangeEv = new CustomEvent("color-picker-change", { detail: { name: input.name, color: input.value}})
+    window.dispatchEvent(colorChangeEv)
+    this.sendCallbackMessage(input)
+  }
+
+  async sendCallbackMessage(input) {
+      await post(this.callbackUrlValue, { 
       body: {
         name: input.name,
         color: input.value,

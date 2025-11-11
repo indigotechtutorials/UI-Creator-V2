@@ -4,5 +4,6 @@ class ColorSchemeController < ApplicationController
     @color = params[:color]
 
     session[:color_scheme][@name] = @color
+    head :ok
   end
 end
