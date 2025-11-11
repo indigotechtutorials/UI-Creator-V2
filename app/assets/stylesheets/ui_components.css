@@ -32,10 +32,9 @@
       gap: 4px;
 
       .icon {
-        color: rgb(45, 178, 45);
         width: 16px;
-        display: none;
-      } 
+        display: flex;
+      }
     }
 
     .copy-code:hover {
