@@ -15,7 +15,7 @@ private
     if session[:color_scheme].present?
       session[:color_scheme]
     else
-      {
+      session[:color_scheme] = {
         black: "hsl(253, 69%, 5%)",
         dark_gray: "hsl(268, 12%, 24%)",
         light_gray: "hsl(258, 16%, 66%)",
@@ -25,6 +25,7 @@ private
         primary: "hsl(270, 50%, 54%)",
         secondary: "hsl(211, 68%, 57%)",
       }
+      session[:color_scheme]
     end
   end
 end
