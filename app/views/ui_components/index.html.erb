@@ -51,17 +51,8 @@
       </div>
 
       <div class="color-scheme-grid">
-        <div class="color-scheme-column" data-controller="color-picker" data-color-picker-callback-url-value="<%= color_scheme_path %>">
-          <div class="color-preview background-primary" data-color-picker-target="preview"></div>
-          <span> Primary Color </span>
-          <input name="primary" type="text" data-coloris 
-            data-action="color-picker#change" value="<%= @color_scheme[:primary] %>">
-        </div>
-
-        <div class="color-scheme-column">
-          <div class="color-preview background-secondary"></div>
-          <span> Secondary Color </span>
-        </div>
+        <%= render ColorSchemePreviewComponent.new("primary", @color_scheme.primary) %>
+        <%= render ColorSchemePreviewComponent.new("secondary", @color_scheme.secondary) %>
       </div>
     </div>
   </div>
