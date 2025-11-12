@@ -60,16 +60,6 @@ span, p {
   }
 }
 
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
 .internal-app-navbar {
   height: 4rem;
   background-color: white;
