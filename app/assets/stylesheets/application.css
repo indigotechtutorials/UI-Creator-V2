@@ -26,13 +26,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Apply brand colors to elements - start */
 
-h1, h2, h3, h4, h5, h6 {
+/* Commented out as it messes with the apps UI. Instead should be added to final build css */
+/* h1, h2, h3, h4, h5, h6 {
   color: var(--black);
 }
 
 span, p {
   color: var(--dark-gray);
-}
+} */
 
 /* Apply brand colors to elements - end */
 
@@ -67,4 +68,37 @@ span, p {
 .dark-mode {
   background-color: black;
   color: white;
+}
+
+.internal-app-navbar {
+  height: 4rem;
+  background-color: white;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  border-bottom: 0.5px darkgray solid;
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) darkgray;
+  display: flex;
+
+  .navbar-content {
+    height: 100%;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 0px 32px 0px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .ui-settings-link {
+      width: 32px;
+    }
+  }
 }

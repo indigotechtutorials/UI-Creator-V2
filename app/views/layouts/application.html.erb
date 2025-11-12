@@ -26,9 +26,9 @@
   </head>
 
   <body data-controller="dark-mode-toggle">
+    <%= render "layouts/navbar" %>
     <%= yield %>
-    <div id="dynamic-css">
-      <%= render "layouts/color_scheme_css" %>
-    </div>
+    <%= render "layouts/color_scheme_css" %>
+    <%= render "layouts/internal_app_color_scheme_css" %>
   </body>
 </html>

@@ -2,9 +2,9 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-
 document.addEventListener("turbo:load", () => {
   hljs.highlightAll();
+  
   Coloris({
     format: "hsl",
   });

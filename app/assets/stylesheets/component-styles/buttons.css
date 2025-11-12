@@ -7,16 +7,33 @@
 
 /* Organization of UI library styling */
 
+/* Shared styles: Start ( Put all styles that are shared to DRY up CSS code */
+/* Also means whenever adding a new button class we need to include its styling here */
+
+.primary-button, .secondary-button, .outline-button, .delete-button, .round-button, .dark-button, .icon-button {
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  transition: transform 250ms ease-in;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    height: 20px;
+    width: auto;
+  }
+}
+
+/* Shared styles: End */
+
+
 .primary-button {
   text-decoration: none;
   background-color: var(--primary);
-  padding: var(--button-padding);
   border: var(--border-size) solid var(--primary);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--primary) h s calc(l + 40));
-  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
-  transition: transform 250ms ease-in;
 }
 
 .primary-button:hover {
@@ -27,12 +44,9 @@
   text-decoration: none;
   background-color: var(--secondary);
   border: var(--border-size) solid var(--secondary);
-  padding: var(--button-padding);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--secondary) h s calc(l + 40));
-  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--secondary) h s calc(l - 40) / 0.5);
-  transition: transform 250ms ease-in;
 }
 
 .secondary-button:hover {
@@ -42,10 +56,8 @@
 .outline-button {
   text-decoration: none;
   border: var(--border-size) solid var(--primary);
-  padding: var(--button-padding);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--primary) h s l);
-  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
   transition: background-color 250ms ease-in;
 }
@@ -58,11 +70,9 @@
 .delete-button {
   text-decoration: none;
   background-color: var(--red);
-  padding: var(--button-padding);
   border: var(--border-size) solid var(--red);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--red) h s calc(l + 40));
-  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
   transition: background-color 250ms ease-in;
 }
@@ -75,13 +85,10 @@
 .round-button {
   text-decoration: none;
   background-color: var(--primary);
-  padding: var(--button-padding);
   border: var(--border-size) solid var(--primary);
   border-radius: 100px;
   color: hsl(from var(--primary) h s calc(l + 40));
-  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
-  transition: transform 250ms ease-in;
 }
 
 .round-button:hover {
@@ -91,11 +98,8 @@
 .dark-button {
   text-decoration: none;
   background-color: hsl(from var(--black) h s calc(l - 10));
-  padding: var(--button-padding);
   border: var(--border-size) solid hsl(from var(--black) h s calc(l - 10));
   border-radius: var(--button-border-radius);
   color: hsl(from var(--black) h s calc(l + 80));
-  font-size: var(--button-font-size);
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--primary) h s calc(l - 40) / 0.5);
-  transition: transform 250ms ease-in;
 }

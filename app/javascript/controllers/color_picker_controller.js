@@ -18,7 +18,7 @@ export default class extends ApplicationController {
   }
 
   async sendCallbackMessage(input) {
-      await post(this.callbackUrlValue, { 
+    await post(this.callbackUrlValue, { 
       body: {
         name: input.name,
         color: input.value,
