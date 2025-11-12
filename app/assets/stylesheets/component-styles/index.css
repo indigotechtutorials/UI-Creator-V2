@@ -1,0 +1,8 @@
+/* Main root CSS definitions shared between components */
+
+:root {
+  /* Box shadow needs to use same values applied on all elements to make website look good */
+  --box-shadow-h-offset: 5px;
+  --box-shadow-v-offset: 5px;
+  --box-shadow-blur: 10px;
+}

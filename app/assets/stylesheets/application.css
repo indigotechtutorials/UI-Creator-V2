@@ -7,15 +7,36 @@
  * depending on specificity.
  *
  * Consider organizing styles into separate files for maintainability.
- */
+*/
 
- * {
+/* Default reset CSS - Start */
+
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
- }
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+  
+/* Default reset CSS - End */
 
- .large-container {
+/* Apply brand colors to elements - start */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--black);
+}
+
+span, p {
+  color: var(--dark-gray);
+}
+
+/* Apply brand colors to elements - end */
+
+.large-container {
   max-width: 1400px;
   min-height: 100vh;
   margin: 0px auto 0px auto;

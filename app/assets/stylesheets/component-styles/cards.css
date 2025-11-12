@@ -1,0 +1,39 @@
+:root {
+  --card-padding: 16px;
+  --card-border-size: 1px;
+  --card-border-radius: 8px;
+}
+
+.card {
+  padding: var(--card-padding);
+  background-color: var(--white);
+  border: var(--card-border-size) var(--light-gray) solid;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--light-gray) h s calc(l - 40) / 0.5);
+
+  .card-title {
+    font-size: 30px;
+    padding-bottom: 8px;
+  }
+
+  .card-body {
+    font-size: 18px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-bottom: 8px;
+  }
+
+  .card-footer {
+    padding: 8px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: end;
+  }
+
+  .card-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
