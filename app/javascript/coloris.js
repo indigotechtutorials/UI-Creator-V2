@@ -1264,6 +1264,9 @@
   })();
 
   // Init the color picker when the DOM is ready
-  DOMReady(init);
+
+  document.addEventListener("turbo:load", () => {
+    DOMReady(init);
+  })
 
 })(window, document, Math);
