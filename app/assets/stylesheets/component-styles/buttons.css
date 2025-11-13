@@ -28,7 +28,6 @@
 
 
 .primary-button {
-  text-decoration: none;
   background-color: var(--primary);
   border: var(--border-size) solid var(--primary);
   border-radius: var(--button-border-radius);
@@ -41,7 +40,6 @@
 }
 
 .secondary-button {
-  text-decoration: none;
   background-color: var(--secondary);
   border: var(--border-size) solid var(--secondary);
   border-radius: var(--button-border-radius);
@@ -54,7 +52,6 @@
 }
 
 .outline-button {
-  text-decoration: none;
   border: var(--border-size) solid var(--primary);
   border-radius: var(--button-border-radius);
   color: hsl(from var(--primary) h s l);
@@ -68,7 +65,6 @@
 }
 
 .delete-button {
-  text-decoration: none;
   background-color: var(--red);
   border: var(--border-size) solid var(--red);
   border-radius: var(--button-border-radius);
@@ -83,7 +79,6 @@
 }
 
 .round-button {
-  text-decoration: none;
   background-color: var(--primary);
   border: var(--border-size) solid var(--primary);
   border-radius: 100px;
@@ -96,7 +91,6 @@
 }
 
 .dark-button {
-  text-decoration: none;
   background-color: hsl(from var(--black) h s calc(l - 10));
   border: var(--border-size) solid hsl(from var(--black) h s calc(l - 10));
   border-radius: var(--button-border-radius);

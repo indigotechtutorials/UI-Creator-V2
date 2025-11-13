@@ -4,22 +4,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--internal-app-header);
 }
 
-/* UI for AppUISettings page */
+p, span {
+  color: var(--internal-app-text);
+}
 
-.internal-app-color-scheme {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 32px;
-
-  .color-scheme-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-
-    h4 {
-      font-size: 32px;
-    }
-  }
+body {
+  background-color: var(--internal-app-background);
 }

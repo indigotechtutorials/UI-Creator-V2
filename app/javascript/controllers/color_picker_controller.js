@@ -12,7 +12,8 @@ export default class extends ApplicationController {
 
   async change(e) {
     let input = e.target
-    let colorChangeEv = new CustomEvent("color-picker-change", { detail: { name: input.name, color: input.value}})
+    let prefix = e?.params?.prefix
+    let colorChangeEv = new CustomEvent("color-picker-change", { detail: { name: input.name, color: input.value, prefix: prefix }})
     window.dispatchEvent(colorChangeEv)
     this.sendCallbackMessage(input)
   }

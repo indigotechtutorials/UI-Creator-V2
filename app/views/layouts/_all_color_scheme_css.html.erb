@@ -1,5 +1,7 @@
 <style data-controller="color-scheme" data-action="color-picker-change@window->color-scheme#updateColor">
   :root {
+    /* User UI Library Color Scheme */
+
     --black: <%= @color_scheme[:black] %>;
     --dark-gray: <%= @color_scheme[:dark_gray] %>;
     --light-gray: <%= @color_scheme[:light_gray] %>;
@@ -8,5 +10,11 @@
     --green: <%= @color_scheme[:green] %>;
     --primary: <%= @color_scheme[:primary] %>;
     --secondary: <%= @color_scheme[:secondary] %>;
+
+    /* Internal App Color Scheme */
+
+    --internal-app-header: <%= @internal_app_color_scheme.header %>;
+    --internal-app-text: <%= @internal_app_color_scheme.text %>;
+    --internal-app-background: <%= @internal_app_color_scheme.background %>;
   }
 </style>

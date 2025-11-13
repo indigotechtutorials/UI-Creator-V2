@@ -2,17 +2,16 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="color-scheme"
 export default class extends Controller {
-  static values = { prefix: String }
-  updateColor({ detail: { name, color }}) {
-    // console.log("Updating", name, "To color", color)
+  updateColor({ detail: { name, color, prefix }}) {
     let varName = ""
 
-    if (this.hasPrefixValue) {
-      varName += `${this.prefixValue}-`
+    if (prefix) {
+      varName = `${prefix}-${name}`
+    } else {
+      varName = name
     }
 
-    varName += name
-
+    // console.log("Updating", name, "To color", color)
     document.documentElement.style.setProperty(`--${varName}`, color);
   }
 }
