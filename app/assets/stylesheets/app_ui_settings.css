@@ -40,3 +40,18 @@
 }
 
 /* Auto gen color scheme styling */
+
+.auto-gen-container {
+  margin-top: 16px;
+
+  .color-pallete-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+}

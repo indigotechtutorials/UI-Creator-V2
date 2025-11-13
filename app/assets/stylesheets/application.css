@@ -23,24 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: black;
   text-decoration: none;
 }
   
 /* Default reset CSS - End */
-
-/* Apply brand colors to elements - start */
-
-/* Commented out as it messes with the apps UI. Instead should be added to final build css */
-/* h1, h2, h3, h4, h5, h6 {
-  color: var(--black);
-}
-
-span, p {
-  color: var(--dark-gray);
-} */
-
-/* Apply brand colors to elements - end */
 
 .large-container {
   max-width: 1400px;
@@ -67,14 +53,14 @@ span, p {
 
 .internal-app-navbar {
   height: 4rem;
-  background-color: white;
+  background-color: hsl(from var(--internal-app-background) h s calc(l - 10));
   width: 100%;
   position: sticky;
   top: 0px;
   left: 0px;
   z-index: 1000;
-  border-bottom: 0.5px darkgray solid;
-  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) darkgray;
+  border-bottom: 0.5px hsl(from var(--internal-app-background) h s calc(l + 40)) solid;
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--internal-app-background) h s calc(l + 20));
   display: flex;
 
   .navbar-content {
