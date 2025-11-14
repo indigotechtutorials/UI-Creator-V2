@@ -2,9 +2,29 @@
 
 This is an app to help you create a UI library for your next website.
 
-### Tech used
+#### Tech used
 
 Built using Ruby on Rails. without any third party CSS library only plain css.
+
+#### Installation Guide
+
+#### Step 1. Download the app codebase
+
+`git clone https://github.com/indigotechtutorials/UI-Creator-V2 ui-creator`
+
+#### Step 2. Open up the code of the app
+
+`cd ui-creator`
+
+
+#### Step 3. Start the server
+
+`rails s`
+
+#### Step 4. View the app
+
+open the browser and go to [http://localhost:3000](http://localhost:3000)
+
 
 ##### Why v2?
 
