@@ -24,3 +24,12 @@
     margin-right: auto;
   }
 }
+
+/* CSS for mobile phones ( screens below 768 width*/
+@media(max-width: 768px) {
+  .navbar {
+    a:nth-child(n+3) {
+        display: none;
+    }
+  }
+}
