@@ -13,6 +13,9 @@
   align-items: center;
   gap: 8px;
   width: 100%;
+  position: fixed;
+  top: 4rem;
+  z-index: 1111;
 
   svg {
     width: 24px;

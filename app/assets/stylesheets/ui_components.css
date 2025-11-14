@@ -11,6 +11,11 @@
     gap: 16px;
     align-items: center;
     flex-wrap: wrap;
+
+    div {
+      position: static;
+      z-index: 1;
+    }
   }
 
   .code {
