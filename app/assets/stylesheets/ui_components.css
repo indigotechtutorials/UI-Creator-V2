@@ -65,7 +65,6 @@
   }
   
   .color-scheme-grid {
-    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;

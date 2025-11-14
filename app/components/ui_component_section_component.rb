@@ -7,6 +7,6 @@ class UiComponentSectionComponent < ViewComponent::Base
   end
 
   def source_code_content
-    File.read("app/views/ui_components/#{name}s/preview.html")
+    render(partial:"ui_components/#{name}s/preview").to_str
   end
 end

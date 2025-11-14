@@ -16,7 +16,8 @@
   position: fixed;
   top: 4rem;
   z-index: 1111;
-
+  backdrop-filter: blur(10px);
+  
   svg {
     width: 24px;
   }
@@ -24,8 +25,15 @@
 
 .alert-success {
   border: var(--alert-border-size) var(--green) solid;
+  svg {
+    color: var(--green);
+  }
 }
 
 .alert-warning {
   border: var(--alert-border-size) var(--red) solid;
+
+  svg {
+    color: var(--red);
+  }
 }

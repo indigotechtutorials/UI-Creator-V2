@@ -1,0 +1,26 @@
+.navbar {
+  background-color: hsl(from var(--white) h s calc(l - 10));
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 16px 10px 16px 10px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
+
+  a {
+    font-size: 24px;
+    color: var(--dark-gray);
+
+    svg {
+      width: 32px;
+    }
+  }
+
+  a:first-child {
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: auto;
+  }
+}
