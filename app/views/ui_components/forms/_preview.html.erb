@@ -1,0 +1,24 @@
+<%= form_with url: "", authenticity_token: false, 
+  class: "form", html: { style: "max-width: 600px;" } do |form| %>
+  <h2 class="title"> User sign up </h2>
+  <div class="dual-fields">
+    <div class="field-container">
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name %>
+    </div>
+    <div class="field-container">
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name %>
+    </div>
+  </div>
+  <div class="field-container">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+  <div class="field-container">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <%= form.submit "Create account", class: "primary-button" %>
+<% end %>

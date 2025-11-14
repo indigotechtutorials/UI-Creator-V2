@@ -16,8 +16,8 @@
   position: fixed;
   top: 4rem;
   z-index: 1111;
-  backdrop-filter: blur(10px);
-  
+  background-color: var(--white);
+    
   svg {
     width: 24px;
   }
