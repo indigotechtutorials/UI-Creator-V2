@@ -1,0 +1,28 @@
+:root {
+  --alert-padding: 10px 16px 10px 16px;
+  --alert-border-radius: 8px;
+  --alert-border-size: 2px;
+  --alert-font-size: 20px;
+}
+
+.alert-success, .alert-warning {
+  padding: var(--alert-padding);
+  border-radius: var(--alert-border-radius);
+  font-size: var(--alert-font-size);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  svg {
+    width: 24px;
+  }
+}
+
+.alert-success {
+  border: var(--alert-border-size) var(--green) solid;
+}
+
+.alert-warning {
+  border: var(--alert-border-size) var(--red) solid;
+}
