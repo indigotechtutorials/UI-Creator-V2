@@ -75,12 +75,12 @@
       }
 
       .color-preview {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
       }
 
       [data-coloris] {
-        width: 70px;  
+        width: 90px;  
       }
     }
   }
