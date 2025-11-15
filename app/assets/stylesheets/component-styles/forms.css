@@ -1,5 +1,5 @@
 :root {
-  --form-padding: 24px 20px 24px 20px;
+  --form-padding: 36px 28px 36px 28px;
   --form-border-radius: 8px;
 
   --form-input-padding: 8px 10px 8px 10px;
@@ -15,7 +15,7 @@
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--light-gray) h s calc(l - 40) / 0.5);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 36px;
 
   .title {
     color: var(--black);
@@ -41,7 +41,6 @@
     input {
       width: 100%;
       padding: var(--form-input-padding);
-      border: none;
       border-radius: var(--form-input-border-radius);
       border: var(--form-input-border-size) solid var(--light-gray);
       font-size: 20px;

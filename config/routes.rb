@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   resource :app_ui_settings, only: [:show, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resource :color_scheme, only: [:create], controller: :color_scheme
+  resource :exports, only: [:show, :create]
+  resource :bundle_css, only: [:show], controller: :bundle_css do
+    get "download", on: :member
+  end
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check

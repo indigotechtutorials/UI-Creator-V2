@@ -14,7 +14,8 @@
     color: var(--dark-gray);
 
     svg {
-      width: 36px;
+      width: 30px;
+      height: 100%;
     }
   }
 

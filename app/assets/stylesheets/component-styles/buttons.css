@@ -3,6 +3,7 @@
   --button-border-radius: 8px;
   --button-font-size: 18px;
   --border-size: 2px;
+  --button-hover-scale-size: 1.025;
 }
 
 /* Organization of UI library styling */
@@ -22,6 +23,7 @@
   svg {
     height: 20px;
     width: auto;
+    color: inherit;
   }
 }
 
@@ -37,7 +39,7 @@
 }
 
 .primary-button:hover {
-  transform: scale(1.05);
+  transform: scale(var(--button-hover-scale-size));
 }
 
 .secondary-button {
@@ -46,10 +48,14 @@
   border-radius: var(--button-border-radius);
   color: hsl(from var(--secondary) h s calc(l + 40));
   box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--secondary) h s calc(l - 40) / 0.5);
+
+  svg {
+    color: hsl(from var(--secondary) h s calc(l + 40));
+  }
 }
 
 .secondary-button:hover {
-  transform: scale(1.05);
+  transform: scale(var(--button-hover-scale-size));
 }
 
 .outline-button {
@@ -88,7 +94,7 @@
 }
 
 .round-button:hover {
-  transform: scale(1.05);
+  transform: scale(var(--button-hover-scale-size));
 }
 
 .dark-button {
