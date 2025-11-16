@@ -1,7 +1,7 @@
 <div class="color-scheme-column" data-controller="color-picker" 
   data-color-picker-callback-url-value="<%= color_scheme_path %>">
   <div class="color-preview background-<%= name %>" data-color-picker-target="preview"></div>
-  <span> <%= name.capitalize %> </span>
+  <span> <%= display_name.capitalize %> </span>
   <input name="<%= name %>" type="text" data-coloris 
     data-action="color-picker#change" value="<%= color %>">
 </div>

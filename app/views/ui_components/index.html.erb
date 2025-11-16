@@ -13,17 +13,8 @@
       </div>
       <div class="color-scheme-grid">
         <%= render ColorSchemePreviewComponent.new("black", @color_scheme.black) %>
-
-        <div class="color-scheme-column">
-          <div class="color-preview background-dark-gray"></div>
-          <span> Dark Gray </span>
-        </div>
-
-        <div class="color-scheme-column">
-          <div class="color-preview background-light-gray"></div>
-          <span> Light Gray </span>
-        </div>
-
+        <%= render ColorSchemePreviewComponent.new("dark-gray", @color_scheme.light_gray) %>
+        <%= render ColorSchemePreviewComponent.new("light-gray", @color_scheme.light_gray) %>
         <%= render ColorSchemePreviewComponent.new("white", @color_scheme.white) %>
         <%= render ColorSchemePreviewComponent.new("red", @color_scheme.red) %>
         <%= render ColorSchemePreviewComponent.new("green", @color_scheme.green) %>

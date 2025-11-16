@@ -6,4 +6,8 @@ class ColorSchemePreviewComponent < ViewComponent::Base
     @name = name
     @color = color
   end
+
+  def display_name
+    name.split(/_|-/).join(" ")
+  end
 end
