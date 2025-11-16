@@ -16,12 +16,15 @@ Built using Ruby on Rails. without any third party CSS library only plain css.
 
 `cd ui-creator`
 
+#### Step 3. Install ruby gem dependencies
 
-#### Step 3. Start the server
+`bundle install`
+
+#### Step 4. Start the server
 
 `rails s`
 
-#### Step 4. View the app
+#### Step 5. View the app
 
 open the browser and go to [http://localhost:3000](http://localhost:3000)
 
