@@ -1,7 +1,10 @@
 <div class="component-section"> 
-  <h4> <%= name.capitalize %> Components </h4>
-  <div class="preview" data-controller="cancel-clicks" data-action="click@window->cancel-clicks#checkForClick">
-    <%= render "ui_components/#{name}s/preview" %>
+  <h4> <%= header %> </h4>
+  <% if description %>
+    <p> <%= description %> </p>
+  <% end %>
+  <div class="preview <%= "position-static" if !allow_og_pos %>" data-controller="cancel-clicks" data-action="click@window->cancel-clicks#checkForClick">
+    <%= render(partial_path, source_code_render: false) %>
   </div>
   <div class="code" data-controller="clipboard" data-clipboard-text-value="<%= source_code_content %>">
     <%= link_to "#", data: { action: "clipboard#copy" }, class: "copy-code" do %>

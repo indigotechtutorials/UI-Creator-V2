@@ -1,5 +1,4 @@
 :root {
-  --form-padding: 36px 28px 36px 28px;
   --form-border-radius: 8px;
 
   --form-input-padding: 8px 10px 8px 10px;
@@ -10,9 +9,6 @@
 .form {
   width: 100%;
   background-color: var(--white);
-  padding: var(--form-padding);
-  border-radius: var(--form-border-radius);
-  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--light-gray) h s calc(l - 40) / 0.5);
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -26,7 +22,7 @@
   .dual-fields {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 16px;
+    gap: 36px;
   }
 
   .field-container {

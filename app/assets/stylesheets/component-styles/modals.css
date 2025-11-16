@@ -1,0 +1,47 @@
+:root {
+  --modal-padding: 32px 40px 32px 40px;
+  --modal-border-radius: 8px;
+  --modal-height: 500px;
+  --modal-width: 700px;
+}
+
+.modal {
+  background-color: var(--white);
+  padding: var(--modal-padding);
+  border-radius: var(--modal-border-radius);
+  max-height: var(--modal-height);
+  max-width: var(--modal-width);
+  width: 100%;
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--light-gray) h s calc(l - 40) / 0.5);
+  border: var(--card-border-size) var(--light-gray) solid;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 555;
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 32px;
+    color: var(--black);
+  }
+
+  .body {
+  }
+
+  .close {
+    margin-left: auto;
+    
+    svg {
+      width: 32px;
+      color: var(--black);
+    }
+  }
+}

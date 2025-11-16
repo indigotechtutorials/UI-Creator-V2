@@ -43,9 +43,15 @@
     </div>
   </div>
   
-  <%= render UiComponentSectionComponent.new("button") %>
-  <%= render UiComponentSectionComponent.new("card") %>
-  <%= render UiComponentSectionComponent.new("alert") %>
-  <%= render UiComponentSectionComponent.new("navbar") %>
-  <%= render UiComponentSectionComponent.new("form") %>
+  <%= render UiComponentPreviewComponent.new("button") %>
+  <%= render UiComponentPreviewComponent.new("card") %>
+  <%= render UiComponentPreviewComponent.new("alert") %>
+  <%= render UiComponentPreviewComponent.new("navbar") %>
+  <%= render UiComponentPreviewComponent.new("form") %>
+  <%= render UiComponentPreviewComponent.new("inline_modal", 
+    description: "This is an example of a modal styled to be displayed inline",
+    header_text: "Inline modal example") %>
+  <%= render UiComponentPreviewComponent.new("live_modal", 
+    description: "This is a live example allowing you to view the real experience of using the modal.",
+    header_text: "Live modal example", allow_og_pos: true) %>
 </div>

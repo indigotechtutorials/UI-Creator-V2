@@ -1,0 +1,19 @@
+<%= link_to "Open modal", "#", class: "primary-button", data: { modal: "exampleModal1" } %>
+
+<div class="modal" id="exampleModal1">
+  <div class="header">
+    <h4 class="title"> Modal title </h4>
+    <a href="#" class="close" data-modal-close="exampleModal1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </a>
+  </div>
+  <div class="body">
+    <% if source_code_render %>
+      <p> Put your modal content here </p>
+    <% else %>
+      <%= render "ui_components/live_modals/preview_form" %>
+    <% end %>
+  </div>
+</div>
