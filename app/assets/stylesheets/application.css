@@ -87,7 +87,7 @@ a {
   gap: 8px;
   padding: 8px 16px 8px 16px;
   border-radius: 16px;
-  background-color: hsl(from var(--internal-app-background) calc(h + 10) s calc(l + 10));
+  background-color: hsl(from var(--internal-app-background) calc(h + 10) s calc(l + 20));
   transition: transform ease-in 0.5s;
 
   svg {
