@@ -3,7 +3,7 @@
   <% if description %>
     <p> <%= description %> </p>
   <% end %>
-  <div class="preview <%= "position-static" if !allow_og_pos %>" data-controller="cancel-clicks" data-action="click@window->cancel-clicks#checkForClick">
+  <div class="preview <%= "position-static" if position_static %>" data-controller="cancel-clicks" data-action="click@window->cancel-clicks#checkForClick">
     <%= render(partial_path, source_code_render: false) %>
   </div>
   <div class="code" data-controller="clipboard" data-clipboard-text-value="<%= source_code_content %>">

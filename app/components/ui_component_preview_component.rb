@@ -2,13 +2,13 @@
 # For components that only need a single preview partial used buttons, etc.. 
 
 class UiComponentPreviewComponent < ViewComponent::Base
-  attr_reader :name, :partial_path, :description, :header_text, :allow_og_pos
+  attr_reader :name, :partial_path, :description, :header_text, :position_static
   def initialize(name, **args)
     @name = name
     @partial_path = "ui_components/#{name}s/preview"
     @description = args[:description]
     @header_text = args[:header_text]
-    @allow_og_pos = args[:allow_og_pos] || false
+    @position_static = args[:position_static] || false
   end
 
   def source_code_content
