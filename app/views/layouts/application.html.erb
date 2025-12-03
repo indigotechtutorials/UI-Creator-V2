@@ -27,7 +27,7 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <%= render "layouts/navbar" if current_ui_library %>
     <%= yield %>
     <%= render "layouts/all_color_scheme_css" %>
   </body>

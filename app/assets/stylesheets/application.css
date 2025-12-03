@@ -33,6 +33,20 @@ a {
   
 /* Default reset CSS - End */
 
+/* Apply styling for internal app: Meaning our app's UI not related to the users UI library */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--internal-app-header);
+}
+
+p, span, a, svg, label {
+  color: var(--internal-app-text);
+}
+
+body {
+  background-color: var(--internal-app-background);
+}
+
 .large-container {
   max-width: var(--large-screen-size);
   min-height: 100vh;
@@ -107,8 +121,7 @@ a {
   top: 0px;
   left: 0px;
   z-index: 1000;
-  border-bottom: 0.5px hsl(from var(--internal-app-background) h s calc(l + 40)) solid;
-  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--internal-app-background) h s calc(l + 20));
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--internal-app-background) h s calc(l + 5));
   display: flex;
 
   .navbar-content {
@@ -125,8 +138,8 @@ a {
       font-size: 24px;
     }
 
-    .ui-settings-link {
-      width: 32px;
+    .ui-library-name {
+      font-size: 24px;
       margin-left: auto;
     }
 
@@ -143,5 +156,107 @@ a {
   }
   100% {
     transform: rotate(359deg);
+  }
+}
+
+
+/* UI for AppUISettings page */
+
+.switch-type-section {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Manual select partial styling */
+
+.internal-app-color-scheme {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+
+  .color-scheme-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    h4 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .preview {
+      height: 32px;
+    }
+  }
+}
+
+/* Auto gen color scheme styling */
+
+.auto-gen-container {
+  margin-top: 16px;
+
+  .color-pallete-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+
+/* Form styling for UI library page and potentially other form pages */
+
+.internal-form-container {
+  max-width: 700px;
+  width: 100%;
+  min-height: 500px;
+  padding: 64px 32px 64px 32px;
+  border-radius: 8px;
+  margin: 0px auto 0px auto;
+  display: flex;
+  justify-content: center;
+
+  form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .field-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      label {
+        font-size: 24px;
+      }
+
+      input {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 100%;
+      }
+
+      .submit {
+        padding: 4px 6px 4px 6px;
+        background-color: rgb(50, 50, 196);
+        color: rgb(234, 234, 241);
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
   }
 }
