@@ -14,6 +14,8 @@
 :root {
   --large-screen-size: 1400px;
   --medium-screen-size: 700px;
+  --internal-sidebar-width: 400px;
+  --internal-navbar-height: 4rem;
 }
 
 * {
@@ -54,7 +56,7 @@ body {
   padding: 64px 32px 64px 32px;
 }
 
-.large-container {
+.large-container, .internal-sidebar-page {
   h1 {
     font-size: 44px;
   }
@@ -114,7 +116,7 @@ body {
 }
 
 .internal-app-navbar {
-  height: 4rem;
+  height: var(--internal-navbar-height);
   background-color: hsl(from var(--internal-app-background) h s calc(l - 10));
   width: 100%;
   position: sticky;
@@ -258,5 +260,29 @@ body {
         cursor: pointer;
       }
     }
+  }
+}
+
+/* Styling for sidebar popout/ main content positioned left/right */
+
+.internal-sidebar-page {
+  display: flex;
+  width: 100%;
+
+  .page-content {
+    max-width: calc(100% - var(--internal-sidebar-width));
+    min-height: 100vh;
+    margin: 0px auto 0px 0px;
+    padding: 64px 32px 64px 32px;
+  }
+
+  .internal-sidebar {
+    width: var(--internal-sidebar-width);
+    height: calc(100vh - var(--internal-navbar-height));
+    position: sticky;
+    top: var(--internal-navbar-height);
+    right: 0px;
+    background-color: hsl(from var(--internal-app-background) h s calc(l - 10));
+    padding: 8px;
   }
 }

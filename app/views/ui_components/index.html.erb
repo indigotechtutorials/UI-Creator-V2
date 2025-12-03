@@ -1,15 +1,21 @@
-<div class="large-container">
-  <h1> Welcome to your UI Library </h1>
-  <p> These are your custom UI components </p>
-  <%= render UiComponentPreviewComponent.new("button") %>
-  <%= render UiComponentPreviewComponent.new("card") %>
-  <%= render UiComponentPreviewComponent.new("alert", position_static: true) %>
-  <%= render UiComponentPreviewComponent.new("navbar", position_static: true) %>
-  <%= render UiComponentPreviewComponent.new("form") %>
-  <%= render UiComponentPreviewComponent.new("inline_modal", 
-    description: "This is an example of a modal styled to be displayed inline",
-    header_text: "Inline modal example", position_static: true) %>
-  <%= render UiComponentPreviewComponent.new("live_modal", 
-    description: "This is a live example allowing you to view the real experience of using the modal.",
-    header_text: "Live modal example") %>
+<div class="internal-sidebar-page">
+  <div class="page-content">
+    <h1> Welcome to your UI Library </h1>
+    <p> These are your custom UI components </p>
+    <%= render UiComponentPreviewComponent.new("button") %>
+    <%= render UiComponentPreviewComponent.new("card") %>
+    <%= render UiComponentPreviewComponent.new("alert", position_static: true) %>
+    <%= render UiComponentPreviewComponent.new("navbar", position_static: true) %>
+    <%= render UiComponentPreviewComponent.new("form") %>
+    <%= render UiComponentPreviewComponent.new("inline_modal", 
+      description: "This is an example of a modal styled to be displayed inline",
+      header_text: "Inline modal example", position_static: true) %>
+    <%= render UiComponentPreviewComponent.new("live_modal", 
+      description: "This is a live example allowing you to view the real experience of using the modal.",
+      header_text: "Live modal example") %>
+  </div>
+
+  <div class="internal-sidebar"> 
+    <%= turbo_frame_tag :color_scheme, src: color_scheme_path %>
+  </div>
 </div>
