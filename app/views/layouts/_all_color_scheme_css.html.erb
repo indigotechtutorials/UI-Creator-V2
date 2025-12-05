@@ -13,8 +13,8 @@
 
     /* Internal App Color Scheme */
 
-    --internal-app-header: <%= @internal_app_color_scheme.header %>;
-    --internal-app-text: <%= @internal_app_color_scheme.text %>;
-    --internal-app-background: <%= @internal_app_color_scheme.background %>;
+    --internal-app-header: <%= @internal_app_color_scheme.header || "hsl(51 85.1% 6%)" %>;
+    --internal-app-text: <%= @internal_app_color_scheme.text || "hsl(63 41.1% 9.3%)" %>;
+    --internal-app-background: <%= @internal_app_color_scheme.background || "hsl(360 86.2% 100%)" %>;
   }
 </style>

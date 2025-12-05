@@ -16,6 +16,8 @@
   </div>
 
   <div class="internal-sidebar"> 
-    <%= turbo_frame_tag :color_scheme, src: color_scheme_path %>
+    <%= turbo_frame_tag :sidebar do %>
+      <%= render "ui_libraries/sidebar/links" %>
+    <% end %>
   </div>
 </div>

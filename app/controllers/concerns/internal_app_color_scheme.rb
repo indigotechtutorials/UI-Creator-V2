@@ -17,8 +17,8 @@ module InternalAppColorScheme
           session[:internal_app_color_scheme]
         else
           session[:internal_app_color_scheme] = {
-            header: "hsl(0, 0, 0)",
-            text: "hsl(0, 0, 0)",
+            header: "hsl(131 0% 5.3%)",
+            text: "hsl(131 0% 14.1%)",
             background: "hsl(0, 0, 100)",
           }
           session[:internal_app_color_scheme]

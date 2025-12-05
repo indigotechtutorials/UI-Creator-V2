@@ -1,6 +1,23 @@
-<%= turbo_frame_tag :color_scheme do %>
+<%= turbo_frame_tag :sidebar do %>
+  <%= link_to root_path, class: "back-link" do %>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+    </svg>
+  <% end %>
   <div class="color-scheme-container">
-    <div class="basic-colors">
+    <div>
+      <div class="color-scheme-text-container">
+        <h3> Brand colors </h3>
+        <p> This is where you can choose what color associates with your brand </p>
+      </div>
+
+      <div class="color-scheme-grid">
+        <%= render ColorSchemePreviewComponent.new("primary", @color_scheme.primary) %>
+        <%= render ColorSchemePreviewComponent.new("secondary", @color_scheme.secondary) %>
+      </div>
+    </div>
+
+    <div>
       <div class="color-scheme-text-container">
         <h3> Color Scheme </h3>
         <p> All user friendly apps require a good color scheme. </p>
@@ -15,18 +32,6 @@
         <%= render ColorSchemePreviewComponent.new("white", @color_scheme.white) %>
         <%= render ColorSchemePreviewComponent.new("red", @color_scheme.red) %>
         <%= render ColorSchemePreviewComponent.new("green", @color_scheme.green) %>
-      </div>
-    </div>
-
-    <div class="primary-colors">
-      <div class="color-scheme-text-container">
-        <h3> Brand colors </h3>
-        <p> This is where you can choose what color associates with your brand </p>
-      </div>
-
-      <div class="color-scheme-grid">
-        <%= render ColorSchemePreviewComponent.new("primary", @color_scheme.primary) %>
-        <%= render ColorSchemePreviewComponent.new("secondary", @color_scheme.secondary) %>
       </div>
     </div>
   </div>
