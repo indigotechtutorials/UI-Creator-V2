@@ -1,0 +1,2 @@
+class UiLibrary < ApplicationRecord
+end

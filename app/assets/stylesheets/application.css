@@ -14,6 +14,8 @@
 :root {
   --large-screen-size: 1400px;
   --medium-screen-size: 700px;
+  --internal-sidebar-width: 400px;
+  --internal-navbar-height: 4rem;
 }
 
 * {
@@ -33,6 +35,20 @@ a {
   
 /* Default reset CSS - End */
 
+/* Apply styling for internal app: Meaning our app's UI not related to the users UI library */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--internal-app-header);
+}
+
+p, span, a, svg, label {
+  color: var(--internal-app-text);
+}
+
+body {
+  background-color: var(--internal-app-background);
+}
+
 .large-container {
   max-width: var(--large-screen-size);
   min-height: 100vh;
@@ -40,7 +56,7 @@ a {
   padding: 64px 32px 64px 32px;
 }
 
-.large-container {
+.large-container, .internal-sidebar-page {
   h1 {
     font-size: 44px;
   }
@@ -100,15 +116,14 @@ a {
 }
 
 .internal-app-navbar {
-  height: 4rem;
+  height: var(--internal-navbar-height);
   background-color: hsl(from var(--internal-app-background) h s calc(l - 10));
   width: 100%;
   position: sticky;
   top: 0px;
   left: 0px;
   z-index: 1000;
-  border-bottom: 0.5px hsl(from var(--internal-app-background) h s calc(l + 40)) solid;
-  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--internal-app-background) h s calc(l + 20));
+  box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) hsl(from var(--internal-app-background) h s calc(l + 5));
   display: flex;
 
   .navbar-content {
@@ -125,8 +140,8 @@ a {
       font-size: 24px;
     }
 
-    .ui-settings-link {
-      width: 32px;
+    .ui-library-name {
+      font-size: 24px;
       margin-left: auto;
     }
 
@@ -143,5 +158,171 @@ a {
   }
   100% {
     transform: rotate(359deg);
+  }
+}
+
+
+/* UI for AppUISettings page */
+
+.switch-type-section {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Manual select partial styling */
+
+.internal-app-color-scheme {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+
+  .color-scheme-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    h4 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .preview {
+      height: 32px;
+    }
+  }
+}
+
+/* Auto gen color scheme styling */
+
+.auto-gen-container {
+  margin-top: 16px;
+
+  .color-pallete-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+
+/* Form styling for UI library page and potentially other form pages */
+
+.internal-form-container {
+  max-width: 700px;
+  width: 100%;
+  min-height: 500px;
+  padding: 64px 32px 64px 32px;
+  border-radius: 8px;
+  margin: 0px auto 0px auto;
+  display: flex;
+  justify-content: center;
+
+  form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .field-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      label {
+        font-size: 24px;
+      }
+
+      input {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 100%;
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .submit {
+        padding: 4px 6px 4px 6px;
+        background-color: rgb(50, 50, 196);
+        color: rgb(234, 234, 241);
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Styling for sidebar popout/ main content positioned left/right */
+
+.internal-sidebar-page {
+  display: flex;
+  width: 100%;
+
+  .page-content {
+    max-width: calc(100% - var(--internal-sidebar-width));
+    min-height: 100vh;
+    margin: 0px auto 0px 0px;
+    padding: 64px 32px 64px 32px;
+  }
+
+  .internal-sidebar {
+    width: var(--internal-sidebar-width);
+    height: calc(100vh - var(--internal-navbar-height));
+    position: sticky;
+    top: var(--internal-navbar-height);
+    right: 0px;
+    background-color: hsl(from var(--internal-app-background) h s calc(l - 10));
+    padding: 10px;
+
+    .sidebar-links {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 16px;
+
+      .icon-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+        border: 1px solid hsl(from var(--internal-app-background) h s calc(l - 30));
+        border-radius: 8px;
+        height: 140px;
+
+        span {
+          font-size: 20px;
+        }
+
+        svg {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+turbo-frame[id='sidebar'] {
+  .back-link {
+    svg {
+      width: 24px;
+    }
   }
 }

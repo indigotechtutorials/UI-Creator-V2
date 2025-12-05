@@ -18,9 +18,6 @@ class CssBundlerService
     @tmp_css_output_path = "tmp/output_css/output_css_file_#{uniq_id}.css"
     @css_file_paths = Dir.glob("app/assets/stylesheets/component-styles/*")
     File.open(@tmp_css_output_path, "w") do |f|
-      @css_file_paths.each do |file_path|
-        f.write "#{File.read(file_path)}\n"
-      end
       f.write """
         :root {
           /* User UI Library Color Scheme */
@@ -35,6 +32,9 @@ class CssBundlerService
           --secondary: #{@color_scheme[:secondary]};
         }\n
       """.strip
+      @css_file_paths.each do |file_path|
+        f.write "#{File.read(file_path)}\n"
+      end
     end
   end
 

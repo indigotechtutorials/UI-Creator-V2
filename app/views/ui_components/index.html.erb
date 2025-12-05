@@ -1,48 +1,23 @@
-<div class="large-container">
-  <h1> Welcome to your UI Library </h1>
-  <p> These are your custom UI components </p>
-
-  <div class="color-scheme-container">
-    <div class="basic-colors">
-      <div class="color-scheme-text-container">
-        <h3> Color Scheme </h3>
-        <p> All user friendly apps require a good color scheme. </p>
-        <br/>
-        <h3> Basic Colors </h3>
-        <p> Every website requires these essential colors </p>
-      </div>
-      <div class="color-scheme-grid">
-        <%= render ColorSchemePreviewComponent.new("black", @color_scheme.black) %>
-        <%= render ColorSchemePreviewComponent.new("dark-gray", @color_scheme.light_gray) %>
-        <%= render ColorSchemePreviewComponent.new("light-gray", @color_scheme.light_gray) %>
-        <%= render ColorSchemePreviewComponent.new("white", @color_scheme.white) %>
-        <%= render ColorSchemePreviewComponent.new("red", @color_scheme.red) %>
-        <%= render ColorSchemePreviewComponent.new("green", @color_scheme.green) %>
-      </div>
-    </div>
-
-    <div class="primary-colors">
-      <div class="color-scheme-text-container">
-        <h3> Brand colors </h3>
-        <p> This is where you can choose what color associates with your brand </p>
-      </div>
-
-      <div class="color-scheme-grid">
-        <%= render ColorSchemePreviewComponent.new("primary", @color_scheme.primary) %>
-        <%= render ColorSchemePreviewComponent.new("secondary", @color_scheme.secondary) %>
-      </div>
-    </div>
+<div class="internal-sidebar-page">
+  <div class="page-content">
+    <h1> Welcome to your UI Library </h1>
+    <p> These are your custom UI components </p>
+    <%= render UiComponentPreviewComponent.new("button") %>
+    <%= render UiComponentPreviewComponent.new("card") %>
+    <%= render UiComponentPreviewComponent.new("alert", position_static: true) %>
+    <%= render UiComponentPreviewComponent.new("navbar", position_static: true) %>
+    <%= render UiComponentPreviewComponent.new("form") %>
+    <%= render UiComponentPreviewComponent.new("inline_modal", 
+      description: "This is an example of a modal styled to be displayed inline",
+      header_text: "Inline modal example", position_static: true) %>
+    <%= render UiComponentPreviewComponent.new("live_modal", 
+      description: "This is a live example allowing you to view the real experience of using the modal.",
+      header_text: "Live modal example") %>
   </div>
-  
-  <%= render UiComponentPreviewComponent.new("button") %>
-  <%= render UiComponentPreviewComponent.new("card") %>
-  <%= render UiComponentPreviewComponent.new("alert", position_static: true) %>
-  <%= render UiComponentPreviewComponent.new("navbar", position_static: true) %>
-  <%= render UiComponentPreviewComponent.new("form") %>
-  <%= render UiComponentPreviewComponent.new("inline_modal", 
-    description: "This is an example of a modal styled to be displayed inline",
-    header_text: "Inline modal example", position_static: true) %>
-  <%= render UiComponentPreviewComponent.new("live_modal", 
-    description: "This is a live example allowing you to view the real experience of using the modal.",
-    header_text: "Live modal example") %>
+
+  <div class="internal-sidebar"> 
+    <%= turbo_frame_tag :sidebar do %>
+      <%= render "ui_libraries/sidebar/links" %>
+    <% end %>
+  </div>
 </div>

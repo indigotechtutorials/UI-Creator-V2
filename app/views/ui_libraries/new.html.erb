@@ -1,0 +1,13 @@
+<div class="large-container"> 
+  <div class="internal-form-container"> 
+    <%= form_with url: ui_libraries_path, model: @ui_library do |form| %>
+      <div class="field-container"> 
+        <%= form.label :name, "Enter the name of your UI Library", class: "label" %>
+        <%= form.text_field :name, class: "field" %>
+      </div>
+      <div class="action-buttons">
+        <%= form.submit "Create Library", class: "submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -55,8 +55,6 @@
 }
 
 .color-scheme-container {
-  margin-top: 32px;
-
   display: flex;
   flex-wrap: wrap;
   align-items: start;
@@ -96,7 +94,7 @@
   }
 
   .color-scheme-text-container {
-    height: 10rem;
+    margin-bottom: 32px;
   }
 }
 
@@ -116,5 +114,35 @@
     height: 250px;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.large-container {
+  .button-actions-container {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    .color-scheme-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: hsl(from var(--internal-app-background) h s calc(l - 20));
+      padding: 14px 20px 14px 20px;
+      border-radius: 14px;
+      font-size: 20px;
+      transition: transform 0.5s ease-in-out;
+      transition: background 1s ease-in-out;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    .color-scheme-button:hover {
+      transform: scale(1.025);
+      background-color: hsl(from var(--internal-app-background) h s calc(l - 10))
+    }
   }
 }
